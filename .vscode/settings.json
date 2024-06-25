@@ -1,0 +1,53 @@
+{
+    // interpreter
+    "python.defaultInterpreterPath": "/home/brain-tecnologia/.cache/pypoetry/virtualenvs/fast-zero-zSRidsbd-py3.12",
+
+    // format
+    "ruff.format.args": [
+        "--line-length=79",
+        "--target-version=py312"
+    ],
+
+    // lint
+    "ruff.lint.args": [
+        "--line-length=79",
+        "--ignore=E402,E712"
+    ],
+
+    // test
+    "python.testing.unittestEnabled": false,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        ".",
+        "-p",
+        "*test*.py"
+    ],
+
+    // exclude files/folders
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/*.egg-info": true,
+        ".venv": true,
+        ".coverage": true
+    },
+    "files.trimTrailingWhitespace": true,
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports.ruff": "explicit"
+        },
+      },
+    "isort.args": [
+        "--profile",
+        "ruff"
+    ],
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.pytestEnabled": true,
+}
